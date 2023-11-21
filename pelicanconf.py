@@ -1,7 +1,7 @@
 AUTHOR = 'SlashGordon'
 SITENAME = 'portfolioplus'
-SITEURL = ""
-
+SITEURL = ''
+MAIN_MENU = True
 PATH = "content"
 
 TIMEZONE = 'Europe/Berlin'
@@ -15,23 +15,20 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Blogroll
-LINKS = (
-    ("Pelican", "https://getpelican.com/"),
-    ("Python.org", "https://www.python.org/"),
-    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
-    ("You can modify those links in your config file", "#"),
+MENUITEMS = (
+    ("Archives", "/archives.html"),
+    ("Categories", "/categories.html"),
+    ("Tags", "/tags.html"),
 )
 
-# Social widget
-SOCIAL = (
-    ("You can add links in your config file", "#"),
-    ("Another social link", "#"),
-)
+
 from mysiteplugins import stocks
+import os
 
-PLUGINS = [stocks]
+PLUGINS = [stocks, "pelican.plugins.webassets"]
 DEFAULT_PAGINATION = 10
 
+STATIC_PATHS = ["dist"]
+THEME ="themes/stocks"
 # Uncomment following line if you want document-relative URLs when developing
-# RELATIVE_URLS = True
+RELATIVE_URLS = os.environ.get("DEBUG", "0") == "1"

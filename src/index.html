@@ -1,0 +1,27 @@
+<!-- src/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My NPM Project</title>
+</head>
+<body>
+  <h1>Hello, NPM Project!</h1>
+
+  <div id="chartContainer" style="height: 300px;"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        highcharts.chart('chartContainer', {
+        title: {
+          text: 'My Chart'
+        },
+        series: [{
+          data: [1, 3, 2, 4]
+        }]
+      });
+    });
+  </script>
+</body>
+</html>

@@ -11,6 +11,10 @@ python = "^3.11"
 pelican = {extras = ["markdown"], version = "^4.9.1"}
 pytickersymbols = "^1.15.0"
 pyyaml = "^6.0.1"
+pelican-search = "^1.1.0"
+pelican-neighbors = "^1.2.0"
+pelican-readtime = "^0.2.0"
+pelican-webassets = "^2.0.0"
 
 
 [build-system]
